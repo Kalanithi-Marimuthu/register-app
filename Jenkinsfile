@@ -95,6 +95,7 @@ pipeline {
        stage("Trigger CD Pipeline") {
             steps {
                 script {
+		    // This is for another job running purpose
                     sh "curl -v -k --user admin:${JENKINS_API_TOKEN} -X POST -H 'cache-control: no-cache' -H 'content-type: application/x-www-form-urlencoded' --data 'IMAGE_TAG=${IMAGE_TAG}' 'ec2-52-90-249-4.compute-1.amazonaws.com:8080/job/gitops-cd-job/buildWithParameters?token=gitops-token'"
                 }
             }
