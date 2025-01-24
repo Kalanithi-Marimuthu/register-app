@@ -95,7 +95,7 @@ pipeline {
                 script {
                     // Trigger the CD pipeline after successful CI
                     def response = sh(script: """
-                        curl -v -k --user admin:${JENKINS_API_TOKEN} \
+                        curl -v -k --user dev:${JENKINS_API_TOKEN} \
                         -X POST \
                         -H 'cache-control: no-cache' \
                         -H 'content-type: application/x-www-form-urlencoded' \
