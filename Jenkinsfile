@@ -100,7 +100,7 @@ pipeline {
                         -H 'cache-control: no-cache' \
                         -H 'content-type: application/x-www-form-urlencoded' \
                         --data 'IMAGE_TAG=${IMAGE_TAG}' \
-                        'http://ec2-52-90-249-4.compute-1.amazonaws.com:8080/job/gitops-cd-job/buildWithParameters?token=gitops-token'
+                        'http://ec2-16-16-192-244.compute-1.amazonaws.com:8080/job/gitops-cd-job/buildWithParameters?token=gitops-token'
                     """, returnStatus: true)
 
                     if (response != 0) {
