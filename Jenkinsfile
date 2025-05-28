@@ -25,7 +25,7 @@ pipeline {
 
         stage("Checkout from SCM") {
             steps {
-                git branch: 'main', url: 'https://github.com/rajnages/register-app.git'
+                git branch: 'main', url: 'https://github.com/Kalanithi-Marimuthu/register-app.git'
             }
         }
 
